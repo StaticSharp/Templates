@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "StaticSharp",
+    "classifications": [ "StaticSharp", "Web", "Console" ],
+    "identity": "StaticSharp.Templates",
+    "name": "StaticSharp Web Application",
+    "shortName": "staticsharp",
+    "sourceName": "StaticSharpProjectTemplate",
+    "description": "Project template of a static web site based on StaticSharp platform",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "symbols": {
+        "multilanguage": {
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Append support for site localization"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "(!multilanguage)",
+                    "exclude": [
+                        "Root/Ru.cs"
+                    ]
+                }
+            ]
+        }
+    ],
+    "preferNameDirectory": "true"
+}

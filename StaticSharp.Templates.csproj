@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageId>StaticSharp.Templates</PackageId>
+        <PackageTitle>StaticSharp Templates</PackageTitle>
+        <PackageVersion>0.1.0</PackageVersion>
+        <Authors>StaticSharp</Authors>
+        <Description>StaticSharp Templates</Description>
+        <PackageTags>dotnet-new;templates;staticsharp;web</PackageTags>
+        <!--PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile-->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <!--EmbedUntrackedSources>true</EmbedUntrackedSources-->
+
+        <TargetFramework>netstandard2.0</TargetFramework>
+
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <!--NoDefaultExcludes>true</NoDefaultExcludes--> <!-- needed to include folders starting with . like .gitignore-->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**;templates\**\.cache\**" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+
+</Project>
