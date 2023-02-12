@@ -13,11 +13,12 @@
     },
     "symbols": {
         "multilanguage": {
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "false",
-            "description": "Append support for site localization"
-        }
+          "displayName": "Multilanguage",
+          "type": "parameter",
+          "datatype": "bool",
+          "defaultValue": "false",
+          "description": "Append support for site localization"
+      }
     },
     "sources": [
         {

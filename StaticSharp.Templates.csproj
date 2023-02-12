@@ -4,12 +4,12 @@
         <PackageType>Template</PackageType>
         <PackageId>StaticSharp.Templates</PackageId>
         <PackageTitle>StaticSharp Templates</PackageTitle>
-        <PackageVersion>0.1.0</PackageVersion>
+        <PackageVersion>0.1.1</PackageVersion>
         <Authors>StaticSharp</Authors>
         <Description>StaticSharp Templates</Description>
         <PackageTags>dotnet-new;templates;staticsharp;web</PackageTags>
-        <!--PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile-->
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <!--EmbedUntrackedSources>true</EmbedUntrackedSources-->
 
@@ -23,7 +23,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**;templates\**\.cache\**" />
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<None Include="LICENSE" Pack="true" PackagePath="\"/>
+
+		<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**;templates\**\.cache\**" />
         <Compile Remove="**\*" />
     </ItemGroup>
 
