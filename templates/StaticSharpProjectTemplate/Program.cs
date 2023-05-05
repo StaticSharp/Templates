@@ -40,7 +40,7 @@ namespace StaticSharpProjectTemplate
             Cache.RootDirectory = Static.MakeAbsolutePath(".cache");
 
             var projectPath = ProjectDirectory.Path;
-            var baseDirectory = Path.GetFullPath(Path.Combine(projectPath, "../GeneratedSite"));
+            var baseDirectory = Path.GetFullPath(Path.Combine(projectPath, "GeneratedSite"));
 
             var generator = new MultilanguageStaticGenerator<Language>(
                 new DefaultMultilanguageNodeToPath<Language>(),

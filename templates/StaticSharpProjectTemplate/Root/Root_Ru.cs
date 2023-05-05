@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace StaticSharpProjectTemplate.Root
 {
     [Representative]
-    public partial class Ru : Page
+    public partial class Root_Ru : Page
     {
         public override string PageLanguage => "Русский";
 
@@ -18,6 +18,6 @@ namespace StaticSharpProjectTemplate.Root
 
         public override Inlines? Description => "Домашняя страница примера проекта на StaticSharp";
 
-        protected override Blocks BodyContent => new() { "Привет, мир!" };
+        public override Blocks UnmanagedChildren => new() { "Привет, мир!" };
     }
 }

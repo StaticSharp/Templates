@@ -13,12 +13,19 @@
     },
     "symbols": {
         "multilanguage": {
-          "displayName": "Multilanguage",
-          "type": "parameter",
-          "datatype": "bool",
-          "defaultValue": "false",
-          "description": "Append support for site localization"
-      }
+            "displayName": "Multilanguage",
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Append support for site localization"
+        },
+        "vscodesupport": {
+            "displayName": "VsCode support",
+            "type": "parameter",
+            "datatype": "bool",
+            "defaultValue": "false",
+            "description": "Prepare for lanuch from VsCode and StaticSharp extension usage"
+        }
     },
     "sources": [
         {
@@ -26,11 +33,34 @@
                 {
                     "condition": "(!multilanguage)",
                     "exclude": [
-                        "Root/Ru.cs"
+                        "Root/Root_Ru.cs"
+                    ]
+                },
+                {
+                    "condition": "(!vscodesupport)",
+                    "exclude": [
+                        ".vscode/**"
                     ]
                 }
             ]
         }
     ],
-    "preferNameDirectory": "true"
+    "preferNameDirectory": "true",
+    "SpecialCustomOperations": {
+        "**/*.xaml": {
+            "operations": [
+                {
+                    "type": "conditional",
+                    "configuration": {
+                        "actionableIf": [ "<!--#if" ],
+                        "actionableElse": [ "#else", "<!--#else" ],
+                        "actionableElseif": [ "#elseif", "<!--#elseif" ],
+                        "endif": [ "#endif", "<!--#endif" ],
+                        "trim": "true",
+                        "wholeLine": "true"
+                    }
+                }
+            ]
+        }
+    }
 }
