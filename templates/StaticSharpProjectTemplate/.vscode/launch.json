@@ -12,14 +12,14 @@
             "program": "dotnet",
             "args": [
                 "watch",
-                "--project",
-                ".",
-                "--verbose"
+                "run",
+                "--",
+                "--launch-profile",
+                "Server"
             ],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "stopAtEntry": false,
-            "launchSettingsProfile": "Server"
+            "stopAtEntry": false
         },
         {
             "name": "Generator",
