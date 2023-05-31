@@ -9,8 +9,5 @@
 
   <ItemGroup>
     <PackageReference Include="StaticSharp.Core" Version="0.1.73" />
-<!--#if vscodesupport-->
-    <PackageReference Include="StaticSharp.ProjectMapSg" Version="0.1.4" />
-<!--#endif-->
   </ItemGroup>
 </Project>

@@ -12,13 +12,6 @@
         "type": "project"
     },
     "symbols": {
-        "multilanguage": {
-            "displayName": "Multilanguage",
-            "type": "parameter",
-            "datatype": "bool",
-            "defaultValue": "false",
-            "description": "Append support for site localization"
-        },
         "vscodesupport": {
             "displayName": "VsCode support",
             "type": "parameter",
@@ -31,12 +24,6 @@
         {
             "modifiers": [
                 {
-                    "condition": "(!multilanguage)",
-                    "exclude": [
-                        "Root/Root_Ru.cs"
-                    ]
-                },
-                {
                     "condition": "(!vscodesupport)",
                     "exclude": [
                         ".vscode/**"
@@ -45,22 +32,5 @@
             ]
         }
     ],
-    "preferNameDirectory": "true",
-    "SpecialCustomOperations": {
-        "**/*.xaml": {
-            "operations": [
-                {
-                    "type": "conditional",
-                    "configuration": {
-                        "actionableIf": [ "<!--#if" ],
-                        "actionableElse": [ "#else", "<!--#else" ],
-                        "actionableElseif": [ "#elseif", "<!--#elseif" ],
-                        "endif": [ "#endif", "<!--#endif" ],
-                        "trim": "true",
-                        "wholeLine": "true"
-                    }
-                }
-            ]
-        }
-    }
+    "preferNameDirectory": "true"
 }

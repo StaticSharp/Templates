@@ -9,8 +9,5 @@ namespace StaticSharpProjectTemplate
     public enum Language
     {
         En
-#if multilanguage
-            ,Ru
-#endif
     }
 }
