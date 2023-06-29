@@ -1,12 +1,21 @@
 {
-  "profiles": {
-    "Server": {
-      "commandName": "Project",
-      "commandLineArgs": "s"
-    },
-    "Generator": {
-      "commandName": "Project",
-      "commandLineArgs": "g"
+    "profiles": {
+        "Server": {
+            "commandName": "Project",
+            "e": true,
+            "environmentVariables": {
+                "ENTRY_POINT": "Server",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+
+        "Generator": {
+            "commandName": "Project",
+            "e": true,
+            "environmentVariables": {
+                "ENTRY_POINT": "Generator",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        }
     }
-  }
 }
